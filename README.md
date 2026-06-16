@@ -24,11 +24,6 @@ The backend handles authentication, the database, and the AI pose landmarker ana
    ```bash
    pip install -r requirements.txt
    ```
-5. Start the server:
-   ```bash
-   uvicorn main:app --reload
-   ```
-   *(Note: The first time you run this, a `fitnex.db` SQLite file will be automatically created in the folder containing all your tables).*
 
 ### 2. Frontend Setup (React/Vite)
 The frontend contains the UI and directly uses the FastAPI backend.
@@ -46,19 +41,37 @@ The frontend contains the UI and directly uses the FastAPI backend.
    ```bash
    npm install
    ```
-5. Start the development server:
-   ```bash
-   npm run dev
-   ```
 
-### 3. Authentication & OTP (Important for Offline Mode)
+---
+
+## 🏃 How to Run the Application
+Once you have completed the setup above, you will need to open **two separate terminal windows** every time you want to run the app.
+
+**Terminal 1 (The Backend):**
+```bash
+cd python_services
+uvicorn main:app --reload
+```
+*(Note: The first time you run this, a `fitnex.db` SQLite file will be automatically created containing all your tables).*
+
+**Terminal 2 (The Frontend):**
+Ensure you are in the root directory, then run:
+```bash
+npm run dev
+```
+Your app will now be accessible at `http://localhost:5173`.
+
+---
+
+## 🔐 Authentication & OTP (Important for Offline Mode)
 Since this offline version does not connect to external SMTP servers (like Gmail), **it will not actually send emails**. 
-When you register a new account or request a password reset, the application intercepts the email and **prints the OTP code directly in your backend terminal** (the one running `uvicorn`).
+When you register a new account or request a password reset, the application intercepts the email and **prints the OTP code directly in Terminal 1 (your backend terminal)**.
 Simply look at the terminal logs to grab your 6-digit code!
 
-### 4. Contributing
+## 🤝 Contributing
 Please make sure not to commit any `.env`, `.db` (SQLite), or `node_modules` folders. The `.gitignore` is already set up to exclude these files automatically.
 
+---
 ---
 
 <div dir="rtl">
@@ -89,11 +102,6 @@ Please make sure not to commit any `.env`, `.db` (SQLite), or `node_modules` fol
    ```bash
    pip install -r requirements.txt
    ```
-5. قم بتشغيل الخادم:
-   ```bash
-   uvicorn main:app --reload
-   ```
-   *(ملاحظة: عند تشغيل الخادم للمرة الأولى، سيتم إنشاء ملف قاعدة بيانات `fitnex.db` تلقائياً ليحتوي على جميع الجداول).*
 
 ### 2. إعداد الواجهة الأمامية (React/Vite)
 تحتوي الواجهة الأمامية على واجهة المستخدم وتتصل مباشرة بالخادم الخلفي (FastAPI).
@@ -111,17 +119,34 @@ Please make sure not to commit any `.env`, `.db` (SQLite), or `node_modules` fol
    ```bash
    npm install
    ```
-5. قم بتشغيل خادم التطوير:
-   ```bash
-   npm run dev
-   ```
 
-### 3. المصادقة ورمز التحقق (هام جداً للنسخة المحلية)
+---
+
+## 🏃 كيفية تشغيل التطبيق
+بعد الانتهاء من الإعدادات أعلاه، ستحتاج إلى فتح **نافذتي أوامر (Terminals) منفصلتين** في كل مرة ترغب فيها بتشغيل التطبيق.
+
+**نافذة الأوامر الأولى (الخادم الخلفي):**
+```bash
+cd python_services
+uvicorn main:app --reload
+```
+*(ملاحظة: عند تشغيل الخادم للمرة الأولى، سيتم إنشاء ملف قاعدة بيانات `fitnex.db` تلقائياً ليحتوي على جميع الجداول).*
+
+**نافذة الأوامر الثانية (الواجهة الأمامية):**
+تأكد من وجودك في المسار الرئيسي للمشروع، ثم قم بتشغيل:
+```bash
+npm run dev
+```
+سيكون تطبيقك متاحاً الآن عبر الرابط `http://localhost:5173`.
+
+---
+
+## 🔐 المصادقة ورمز التحقق (هام جداً للنسخة المحلية)
 نظراً لأن هذه النسخة المحلية لا تتصل بخوادم إرسال البريد الإلكتروني الخارجية (مثل Gmail)، **فلن يتم إرسال أي رسائل بريد إلكتروني فعلية**.
-عند تسجيل حساب جديد أو طلب إعادة تعيين كلمة المرور، سيقوم النظام بالتقاط الرسالة و**طباعة رمز التحقق (OTP) مباشرة في نافذة الأوامر الخاصة بالخادم الخلفي** (النافذة التي يعمل بها `uvicorn`).
+عند تسجيل حساب جديد أو طلب إعادة تعيين كلمة المرور، سيقوم النظام بالتقاط الرسالة و**طباعة رمز التحقق (OTP) مباشرة في نافذة الأوامر الأولى (الخاصة بالخادم الخلفي)**.
 كل ما عليك فعله هو النظر إلى السجلات في نافذة الأوامر للحصول على الرمز المكون من 6 أرقام!
 
-### 4. المساهمة والنشر
+## 🤝 المساهمة والنشر
 يرجى التأكد من عدم رفع ملفات البيئة `.env` أو قواعد البيانات `.db` (SQLite) أو مجلد `node_modules` إلى المستودع. لقد تم إعداد ملف `.gitignore` بالفعل لتجاهل هذه الملفات تلقائياً.
 
 </div>
