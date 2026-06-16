@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@import './styles/variables.css';
+@import './styles/base.css';
+@import './styles/layout.css';
+@import './styles/home.css';
+@import './styles/auth.css';
+@import './styles/onboarding.css';
+@import './styles/dashboard.css';
+@import './styles/camera.css';
+@import './styles/animations.css';
+@import './styles/responsive.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* FitNex AI */
+
+/* Material Symbols Icon Font */
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+}

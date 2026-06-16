@@ -1,0 +1,297 @@
+### BE: Hash
+$ python -m pytest tests/test_backend_unit.py::test_password_hashing -v
+============================= test session starts =============================
+platform win32 -- Python 3.13.12, pytest-9.0.3, pluggy-1.6.0 -- C:\Users\Mahmoud Mamdoh\miniconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Mahmoud Mamdoh\Downloads\finalProject\python_services
+plugins: anyio-4.10.0, asyncio-1.4.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 0 items / 1 error
+
+=================================== ERRORS ====================================
+_________________ ERROR collecting tests/test_backend_unit.py _________________
+tests\test_backend_unit.py:2: in <module>
+    from services.auth_service import hash_password, verify_password, create_access_token, decode_token
+services\auth_service.py:10: in <module>
+    from config import settings
+config.py:38: in <module>
+    settings = Settings()
+               ^^^^^^^^^^
+..\..\..\miniconda3\Lib\site-packages\pydantic_settings\main.py:194: in __init__
+    super().__init__(
+E   pydantic_core._pydantic_core.ValidationError: 1 validation error for Settings
+E   DATABASE_URL
+E     Field required [type=missing, input_value={}, input_type=dict]
+E       For further information visit https://errors.pydantic.dev/2.12/v/missing
+============================== warnings summary ===============================
+config.py:10
+  C:\Users\Mahmoud Mamdoh\Downloads\finalProject\python_services\config.py:10: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+    class Settings(BaseSettings):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+ERROR tests/test_backend_unit.py - pydantic_core._pydantic_core.ValidationErr...
+========================= 1 warning, 1 error in 0.56s =========================
+
+---------------------------------
+### BE: Verify
+$ python -m pytest tests/test_backend_unit.py::test_password_verification -v
+============================= test session starts =============================
+platform win32 -- Python 3.13.12, pytest-9.0.3, pluggy-1.6.0 -- C:\Users\Mahmoud Mamdoh\miniconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Mahmoud Mamdoh\Downloads\finalProject\python_services
+plugins: anyio-4.10.0, asyncio-1.4.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 0 items / 1 error
+
+=================================== ERRORS ====================================
+_________________ ERROR collecting tests/test_backend_unit.py _________________
+tests\test_backend_unit.py:2: in <module>
+    from services.auth_service import hash_password, verify_password, create_access_token, decode_token
+services\auth_service.py:10: in <module>
+    from config import settings
+config.py:38: in <module>
+    settings = Settings()
+               ^^^^^^^^^^
+..\..\..\miniconda3\Lib\site-packages\pydantic_settings\main.py:194: in __init__
+    super().__init__(
+E   pydantic_core._pydantic_core.ValidationError: 1 validation error for Settings
+E   DATABASE_URL
+E     Field required [type=missing, input_value={}, input_type=dict]
+E       For further information visit https://errors.pydantic.dev/2.12/v/missing
+============================== warnings summary ===============================
+config.py:10
+  C:\Users\Mahmoud Mamdoh\Downloads\finalProject\python_services\config.py:10: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+    class Settings(BaseSettings):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+ERROR tests/test_backend_unit.py - pydantic_core._pydantic_core.ValidationErr...
+========================= 1 warning, 1 error in 0.53s =========================
+
+---------------------------------
+### BE: OTP
+$ python -m pytest tests/test_backend_unit.py::test_generate_otp -v
+============================= test session starts =============================
+platform win32 -- Python 3.13.12, pytest-9.0.3, pluggy-1.6.0 -- C:\Users\Mahmoud Mamdoh\miniconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Mahmoud Mamdoh\Downloads\finalProject\python_services
+plugins: anyio-4.10.0, asyncio-1.4.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 0 items / 1 error
+
+=================================== ERRORS ====================================
+_________________ ERROR collecting tests/test_backend_unit.py _________________
+tests\test_backend_unit.py:2: in <module>
+    from services.auth_service import hash_password, verify_password, create_access_token, decode_token
+services\auth_service.py:10: in <module>
+    from config import settings
+config.py:38: in <module>
+    settings = Settings()
+               ^^^^^^^^^^
+..\..\..\miniconda3\Lib\site-packages\pydantic_settings\main.py:194: in __init__
+    super().__init__(
+E   pydantic_core._pydantic_core.ValidationError: 1 validation error for Settings
+E   DATABASE_URL
+E     Field required [type=missing, input_value={}, input_type=dict]
+E       For further information visit https://errors.pydantic.dev/2.12/v/missing
+============================== warnings summary ===============================
+config.py:10
+  C:\Users\Mahmoud Mamdoh\Downloads\finalProject\python_services\config.py:10: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+    class Settings(BaseSettings):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+ERROR tests/test_backend_unit.py - pydantic_core._pydantic_core.ValidationErr...
+========================= 1 warning, 1 error in 0.45s =========================
+
+---------------------------------
+### BE: Token Create
+$ python -m pytest tests/test_backend_unit.py::test_create_access_token -v
+============================= test session starts =============================
+platform win32 -- Python 3.13.12, pytest-9.0.3, pluggy-1.6.0 -- C:\Users\Mahmoud Mamdoh\miniconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Mahmoud Mamdoh\Downloads\finalProject\python_services
+plugins: anyio-4.10.0, asyncio-1.4.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 0 items / 1 error
+
+=================================== ERRORS ====================================
+_________________ ERROR collecting tests/test_backend_unit.py _________________
+tests\test_backend_unit.py:2: in <module>
+    from services.auth_service import hash_password, verify_password, create_access_token, decode_token
+services\auth_service.py:10: in <module>
+    from config import settings
+config.py:38: in <module>
+    settings = Settings()
+               ^^^^^^^^^^
+..\..\..\miniconda3\Lib\site-packages\pydantic_settings\main.py:194: in __init__
+    super().__init__(
+E   pydantic_core._pydantic_core.ValidationError: 1 validation error for Settings
+E   DATABASE_URL
+E     Field required [type=missing, input_value={}, input_type=dict]
+E       For further information visit https://errors.pydantic.dev/2.12/v/missing
+============================== warnings summary ===============================
+config.py:10
+  C:\Users\Mahmoud Mamdoh\Downloads\finalProject\python_services\config.py:10: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+    class Settings(BaseSettings):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+ERROR tests/test_backend_unit.py - pydantic_core._pydantic_core.ValidationErr...
+========================= 1 warning, 1 error in 0.48s =========================
+
+---------------------------------
+### BE: Token Decode
+$ python -m pytest tests/test_backend_unit.py::test_decode_token -v
+============================= test session starts =============================
+platform win32 -- Python 3.13.12, pytest-9.0.3, pluggy-1.6.0 -- C:\Users\Mahmoud Mamdoh\miniconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Mahmoud Mamdoh\Downloads\finalProject\python_services
+plugins: anyio-4.10.0, asyncio-1.4.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 0 items / 1 error
+
+=================================== ERRORS ====================================
+_________________ ERROR collecting tests/test_backend_unit.py _________________
+tests\test_backend_unit.py:2: in <module>
+    from services.auth_service import hash_password, verify_password, create_access_token, decode_token
+services\auth_service.py:10: in <module>
+    from config import settings
+config.py:38: in <module>
+    settings = Settings()
+               ^^^^^^^^^^
+..\..\..\miniconda3\Lib\site-packages\pydantic_settings\main.py:194: in __init__
+    super().__init__(
+E   pydantic_core._pydantic_core.ValidationError: 1 validation error for Settings
+E   DATABASE_URL
+E     Field required [type=missing, input_value={}, input_type=dict]
+E       For further information visit https://errors.pydantic.dev/2.12/v/missing
+============================== warnings summary ===============================
+config.py:10
+  C:\Users\Mahmoud Mamdoh\Downloads\finalProject\python_services\config.py:10: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+    class Settings(BaseSettings):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+ERROR tests/test_backend_unit.py - pydantic_core._pydantic_core.ValidationErr...
+========================= 1 warning, 1 error in 0.48s =========================
+
+---------------------------------
+### BE: Needs Male
+$ python -m pytest tests/test_backend_unit.py::test_calculate_needs_male -v
+============================= test session starts =============================
+platform win32 -- Python 3.13.12, pytest-9.0.3, pluggy-1.6.0 -- C:\Users\Mahmoud Mamdoh\miniconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Mahmoud Mamdoh\Downloads\finalProject\python_services
+plugins: anyio-4.10.0, asyncio-1.4.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests/test_backend_unit.py::test_calculate_needs_male PASSED             [100%]
+
+============================== warnings summary ===============================
+config.py:10
+  C:\Users\Mahmoud Mamdoh\Downloads\finalProject\python_services\config.py:10: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+    class Settings(BaseSettings):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 1 passed, 1 warning in 0.98s =========================
+
+---------------------------------
+### BE: Needs Female
+$ python -m pytest tests/test_backend_unit.py::test_calculate_needs_female -v
+============================= test session starts =============================
+platform win32 -- Python 3.13.12, pytest-9.0.3, pluggy-1.6.0 -- C:\Users\Mahmoud Mamdoh\miniconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Mahmoud Mamdoh\Downloads\finalProject\python_services
+plugins: anyio-4.10.0, asyncio-1.4.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests/test_backend_unit.py::test_calculate_needs_female PASSED           [100%]
+
+============================== warnings summary ===============================
+config.py:10
+  C:\Users\Mahmoud Mamdoh\Downloads\finalProject\python_services\config.py:10: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+    class Settings(BaseSettings):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+======================== 1 passed, 1 warning in 1.15s =========================
+
+---------------------------------
+### AI: Angle
+$ python -m pytest tests/test_ai_unit.py::test_angle_calculation -v
+============================= test session starts =============================
+platform win32 -- Python 3.13.12, pytest-9.0.3, pluggy-1.6.0 -- C:\Users\Mahmoud Mamdoh\miniconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Mahmoud Mamdoh\Downloads\finalProject\python_services
+plugins: anyio-4.10.0, asyncio-1.4.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests/test_ai_unit.py::test_angle_calculation PASSED                     [100%]
+
+============================== 1 passed in 1.27s ==============================
+
+---------------------------------
+### AI: Cooldown
+$ python -m pytest tests/test_ai_unit.py::test_can_count_rep -v
+============================= test session starts =============================
+platform win32 -- Python 3.13.12, pytest-9.0.3, pluggy-1.6.0 -- C:\Users\Mahmoud Mamdoh\miniconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Mahmoud Mamdoh\Downloads\finalProject\python_services
+plugins: anyio-4.10.0, asyncio-1.4.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests/test_ai_unit.py::test_can_count_rep PASSED                         [100%]
+
+============================== 1 passed in 1.40s ==============================
+
+---------------------------------
+### AI: Mark Rep
+$ python -m pytest tests/test_ai_unit.py::test_mark_rep_counted -v
+============================= test session starts =============================
+platform win32 -- Python 3.13.12, pytest-9.0.3, pluggy-1.6.0 -- C:\Users\Mahmoud Mamdoh\miniconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Mahmoud Mamdoh\Downloads\finalProject\python_services
+plugins: anyio-4.10.0, asyncio-1.4.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests/test_ai_unit.py::test_mark_rep_counted PASSED                      [100%]
+
+============================== 1 passed in 1.33s ==============================
+
+---------------------------------
+### AI: Travel
+$ python -m pytest tests/test_ai_unit.py::test_check_angle_travel -v
+============================= test session starts =============================
+platform win32 -- Python 3.13.12, pytest-9.0.3, pluggy-1.6.0 -- C:\Users\Mahmoud Mamdoh\miniconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Mahmoud Mamdoh\Downloads\finalProject\python_services
+plugins: anyio-4.10.0, asyncio-1.4.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests/test_ai_unit.py::test_check_angle_travel PASSED                    [100%]
+
+============================== 1 passed in 1.53s ==============================
+
+---------------------------------
+### AI: Smooth
+$ python -m pytest tests/test_ai_unit.py::test_smooth_angle -v
+============================= test session starts =============================
+platform win32 -- Python 3.13.12, pytest-9.0.3, pluggy-1.6.0 -- C:\Users\Mahmoud Mamdoh\miniconda3\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\Mahmoud Mamdoh\Downloads\finalProject\python_services
+plugins: anyio-4.10.0, asyncio-1.4.0
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 1 item
+
+tests/test_ai_unit.py::test_smooth_angle PASSED                          [100%]
+
+============================== 1 passed in 1.50s ==============================
+
+---------------------------------

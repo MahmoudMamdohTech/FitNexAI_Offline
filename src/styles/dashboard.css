@@ -1,0 +1,161 @@
+/* AI exercise analysis styles */
+.analysis-results {
+  margin-top: 24px;
+  padding: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--bg-card-border);
+  border-radius: var(--radius-lg);
+  animation: fadeIn 0.5s ease;
+}
+
+.score-display {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.score-circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid;
+  position: relative;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.score-circle.excellent {
+  border-color: var(--neon-green);
+  background: radial-gradient(circle, rgba(57, 255, 20, 0.2) 0%, transparent 70%);
+  box-shadow: 0 0 30px var(--neon-green);
+}
+
+.score-circle.good {
+  border-color: #ffa500;
+  background: radial-gradient(circle, rgba(255, 165, 0, 0.2) 0%, transparent 70%);
+  box-shadow: 0 0 30px #ffa500;
+}
+
+.score-circle.needs-improvement {
+  border-color: #ff4444;
+  background: radial-gradient(circle, rgba(255, 68, 68, 0.2) 0%, transparent 70%);
+  box-shadow: 0 0 30px #ff4444;
+}
+
+.score-number {
+  font-size: 36px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.score-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  opacity: 0.8;
+  margin-top: 4px;
+}
+
+.feedback-section,
+.corrections-section {
+  margin-bottom: 24px;
+}
+
+.feedback-section h3,
+.corrections-section h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: var(--text-white);
+}
+
+.feedback-list,
+.corrections-list {
+  list-style: none;
+  padding: 0;
+}
+
+.feedback-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: var(--radius-md);
+  background: var(--bg-input);
+  border: 1px solid var(--bg-input-border);
+}
+
+.feedback-item.positive {
+  border-color: rgba(57, 255, 20, 0.3);
+  background: rgba(57, 255, 20, 0.05);
+}
+
+.feedback-item.negative {
+  border-color: rgba(255, 68, 68, 0.3);
+  background: rgba(255, 68, 68, 0.05);
+}
+
+.correction-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: var(--radius-md);
+  background: rgba(255, 165, 0, 0.05);
+  border: 1px solid rgba(255, 165, 0, 0.3);
+}
+
+.analysis-error {
+  text-align: center;
+  padding: 24px;
+  background: rgba(255, 68, 68, 0.1);
+  border: 1px solid rgba(255, 68, 68, 0.3);
+  border-radius: var(--radius-md);
+  color: #ff4444;
+}
+
+.analysis-error .material-symbols-outlined {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}
+
+/* scoped resets (only inside AI analysis cards) */
+.analysis-results img {
+  max-width: 100%;
+  display: block;
+}
+
+.analysis-results ul {
+  list-style: none;
+}
+
+/* Scoped icon button reset */
+.analysis-results button.icon-btn {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+.analysis-results input {
+  font-family: inherit;
+}

@@ -1,0 +1,21 @@
+/* CSS variables */
+:root {
+  --bg-dark: #0a1a0a;
+  --bg-card: rgba(255, 255, 255, 0.05);
+  --bg-card-border: rgba(255, 255, 255, 0.1);
+  --bg-input: #0f1f0f;
+  --bg-input-border: rgba(255, 255, 255, 0.15);
+  --neon-green: #39ff14;
+  --neon-green-hover: #2de010;
+  --text-white: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.55);
+  --text-secondary: rgba(255, 255, 255, 0.75);
+  --feature-card-bg: #0f1f10;
+  --feature-card-border: rgba(255, 255, 255, 0.08);
+  --highlight-bg: #0d1a0d;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --transition: all 0.25s ease;
+}

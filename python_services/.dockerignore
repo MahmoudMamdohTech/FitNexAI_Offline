@@ -1,0 +1,11 @@
+# FitNex AI — Python AI Microservice
+__pycache__/
+*.pyc
+*.pyo
+.env
+debug_frame.jpg
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
