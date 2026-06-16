@@ -7,7 +7,7 @@ asyncpg==0.29.0
 python-multipart==0.0.9
 python-dotenv==1.0.1
 opencv-python-headless==4.10.0.84
-mediapipe==0.10.14
+mediapipe==0.10.35
 numpy==1.26.4
 python-jose[cryptography]==3.3.0
 passlib[bcrypt]==1.7.4
