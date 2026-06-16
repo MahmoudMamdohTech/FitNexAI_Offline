@@ -12,35 +12,21 @@ The backend handles authentication, the database, and the AI pose landmarker ana
    ```bash
    cd python_services
    ```
-2. Set up your environment variables by copying the example file:
-   ```bash
-   cp .env.example .env
-   ```
-3. Open `python_services/.env` and ensure your database is set to SQLite (this removes the need for an external Supabase connection):
-   ```env
-   DATABASE_URL=sqlite+aiosqlite:///./fitnex.db
-   ```
-4. Install the Python dependencies (we recommend creating a virtual environment first):
+2. Install the Python dependencies (we recommend creating a virtual environment first):
    ```bash
    pip install -r requirements.txt
    ```
+*(Note: Because this is an offline repository, the `.env` configuration is already included and pre-configured for SQLite!)*
 
 ### 2. Frontend Setup (React/Vite)
 The frontend contains the UI and directly uses the FastAPI backend.
 
 1. Open a new terminal in the root folder (where `package.json` is).
-2. Copy the frontend environment variables:
-   ```bash
-   cp .env.example .env
-   ```
-3. Ensure `VITE_AI_URL` points to your local FastAPI server:
-   ```env
-   VITE_AI_URL=http://localhost:8000
-   ```
-4. Install Node modules:
+2. Install Node modules:
    ```bash
    npm install
    ```
+*(Note: The local `.env` is already included to point to your FastAPI server automatically).*
 
 ---
 
@@ -69,7 +55,7 @@ When you register a new account or request a password reset, the application int
 Simply look at the terminal logs to grab your 6-digit code!
 
 ## 🤝 Contributing
-Please make sure not to commit any `.env`, `.db` (SQLite), or `node_modules` folders. The `.gitignore` is already set up to exclude these files automatically.
+Please make sure not to commit any `.db` (SQLite) or `node_modules` folders. The `.gitignore` is already set up to exclude these files automatically.
 
 ---
 ---
@@ -90,35 +76,21 @@ Please make sure not to commit any `.env`, `.db` (SQLite), or `node_modules` fol
    ```bash
    cd python_services
    ```
-2. قم بإعداد متغيرات البيئة عن طريق نسخ ملف المثال:
-   ```bash
-   cp .env.example .env
-   ```
-3. افتح ملف `python_services/.env` وتأكد من تعيين قاعدة البيانات إلى SQLite (هذا يلغي الحاجة للاتصال الخارجي بـ Supabase):
-   ```env
-   DATABASE_URL=sqlite+aiosqlite:///./fitnex.db
-   ```
-4. قم بتثبيت حزم بايثون المطلوبة (نوصي بإنشاء بيئة افتراضية أولاً):
+2. قم بتثبيت حزم بايثون المطلوبة (نوصي بإنشاء بيئة افتراضية أولاً):
    ```bash
    pip install -r requirements.txt
    ```
+*(ملاحظة: نظراً لأن هذا المستودع مخصص للعمل بدون إنترنت، فقد تم تضمين ملفات `.env` وتكوينها مسبقاً لاستخدام قاعدة بيانات SQLite تلقائياً!)*
 
 ### 2. إعداد الواجهة الأمامية (React/Vite)
 تحتوي الواجهة الأمامية على واجهة المستخدم وتتصل مباشرة بالخادم الخلفي (FastAPI).
 
 1. افتح نافذة أوامر (Terminal) جديدة في المسار الرئيسي للمشروع (حيث يوجد ملف `package.json`).
-2. قم بنسخ متغيرات البيئة الخاصة بالواجهة الأمامية:
-   ```bash
-   cp .env.example .env
-   ```
-3. تأكد من أن المتغير `VITE_AI_URL` يشير إلى الخادم المحلي:
-   ```env
-   VITE_AI_URL=http://localhost:8000
-   ```
-4. قم بتثبيت حزم Node:
+2. قم بتثبيت حزم Node:
    ```bash
    npm install
    ```
+*(ملاحظة: ملف `.env` المحلي مضمن بالفعل ويشير إلى الخادم المحلي الخاص بك تلقائياً).*
 
 ---
 
@@ -147,6 +119,6 @@ npm run dev
 كل ما عليك فعله هو النظر إلى السجلات في نافذة الأوامر للحصول على الرمز المكون من 6 أرقام!
 
 ## 🤝 المساهمة والنشر
-يرجى التأكد من عدم رفع ملفات البيئة `.env` أو قواعد البيانات `.db` (SQLite) أو مجلد `node_modules` إلى المستودع. لقد تم إعداد ملف `.gitignore` بالفعل لتجاهل هذه الملفات تلقائياً.
+يرجى التأكد من عدم رفع قواعد البيانات `.db` (SQLite) أو مجلد `node_modules` إلى المستودع. لقد تم إعداد ملف `.gitignore` بالفعل لتجاهل هذه الملفات تلقائياً.
 
 </div>
